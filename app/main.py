@@ -44,6 +44,9 @@ app.include_router(pages.router)
 app.include_router(student.router)
 app.include_router(admin.router)
 
+@app.get("/")
+async def root():
+    return {"message": "Server is running"}
 
 @app.get("/api/health")
 async def health():
