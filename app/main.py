@@ -6,7 +6,6 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from config import EVENT_NAME
 
 from .config import settings, EVENT_NAME
 from .database import Base, engine, SessionLocal
