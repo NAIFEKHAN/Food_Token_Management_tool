@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Select Food | {{ event_name }}{% endblock %}
+{% block body %}
+<div class="container py-5">
+  <div class="text-center mb-4">
+    <h1 class="brand-title">{{ event_name }}</h1>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card card-dark p-4 text-center">
+        <h4>Welcome, <span id="sName" class="text-warning"></span></h4>
+        <p class="text-secondary mb-4">Roll No: <span id="sRoll"></span></p>
+        <p class="mb-4">Select your meal preference. <strong class="text-warning">This cannot be changed later.</strong></p>
+        <div class="d-grid gap-3">
+          <button class="btn btn-success btn-lg" data-food="Veg">🥗 Veg</button>
+          <button class="btn btn-danger  btn-lg" data-food="Non-Veg">🍗 Non-Veg</button>
+        </div>
+        <div id="msg" class="text-warning small mt-3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}<script src="/static/js/food_select.js"></script>{% endblock %}

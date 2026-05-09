@@ -1,0 +1,91 @@
+/* Black & Gold Farewell Theme */
+:root {
+  --gold: #d4af37;
+  --gold-soft: #f1d36a;
+  --black: #0a0a0a;
+  --panel: #15151a;
+  --panel-2: #1d1d24;
+  --text: #f5f5f5;
+  --muted: #b9b9b9;
+}
+
+html, body { background: var(--black); color: var(--text); min-height: 100%; }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background:
+    radial-gradient(1100px 600px at 90% -10%, rgba(212,175,55,0.12), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(212,175,55,0.10), transparent 60%),
+    var(--black);
+}
+
+.brand-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+.card-dark {
+  background: var(--panel);
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  color: var(--text);
+}
+.card-dark .form-control, .card-dark .form-select {
+  background: var(--panel-2); color: var(--text);
+  border: 1px solid rgba(212,175,55,0.25);
+}
+.card-dark .form-control:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 .2rem rgba(212,175,55,0.25);
+  background: var(--panel-2); color: var(--text);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #1a1300; font-weight: 600; border: none;
+}
+.btn-gold:hover { filter: brightness(1.07); color: #1a1300; }
+.btn-outline-gold {
+  border: 1px solid var(--gold); color: var(--gold); background: transparent;
+}
+.btn-outline-gold:hover { background: var(--gold); color: #1a1300; }
+
+.stat-card {
+  background: linear-gradient(160deg, var(--panel), var(--panel-2));
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 16px; padding: 18px;
+}
+.stat-card .label { color: var(--muted); font-size: .85rem; text-transform: uppercase; letter-spacing: 1px; }
+.stat-card .value { color: var(--gold); font-size: 2rem; font-weight: 700; }
+
+.token-card {
+  background: #000;
+  border: 2px solid var(--gold);
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+}
+.token-card h3 { color: var(--gold); }
+.token-id { font-size: 1.6rem; color: var(--gold); letter-spacing: 2px; font-weight: 700; }
+
+.navbar-dark.bg-black { background-color: #000 !important; border-bottom: 1px solid rgba(212,175,55,0.25); }
+.navbar-brand { color: var(--gold) !important; font-weight: 700; }
+.nav-link { color: var(--muted) !important; }
+.nav-link:hover, .nav-link.active { color: var(--gold) !important; }
+
+.table-dark-gold { color: var(--text); }
+.table-dark-gold thead th { color: var(--gold); border-color: rgba(212,175,55,0.3); }
+.table-dark-gold td, .table-dark-gold th { border-color: rgba(212,175,55,0.12); }
+
+.badge-veg { background: #1f7a3a; }
+.badge-nonveg { background: #a23030; }
+.badge-used { background: #555; }
+.badge-unused { background: var(--gold); color: #1a1300; }
+
+@media print {
+  body * { visibility: hidden; }
+  #print-area, #print-area * { visibility: visible; }
+  #print-area { position: absolute; left: 0; top: 0; width: 100%; }
+}
