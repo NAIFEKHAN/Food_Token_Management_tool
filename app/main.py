@@ -2,9 +2,11 @@
 import os
 from contextlib import asynccontextmanager
 
+
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from config import EVENT_NAME
 
 from .config import settings
 from .database import Base, engine, SessionLocal
@@ -30,7 +32,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="BIHER IT Farewell 2026", lifespan=lifespan)
+app = FastAPI(title=EVENT_NAME, lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
