@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Your Token | {{ event_name }}{% endblock %}
+{% block body %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div id="print-area" class="token-card">
+        <h3 class="mb-1" id="tEvent">{{ event_name }}</h3>
+        <p class="text-secondary mb-4">Food Token</p>
+        <div class="text-start mb-3">
+          <div><strong class="text-warning">Name:</strong> <span id="tName"></span></div>
+          <div><strong class="text-warning">Roll No:</strong> <span id="tRoll"></span></div>
+          <div><strong class="text-warning">Food:</strong> <span id="tFood"></span></div>
+        </div>
+        <div class="token-id mb-3" id="tToken"></div>
+        <img id="tQR" alt="QR Code" style="max-width: 240px; background:#fff; padding:8px; border-radius:8px;" />
+        <p class="text-secondary small mt-3 mb-0">Present this token at the food counter</p>
+      </div>
+      <div class="d-flex gap-2 mt-4">
+        <button class="btn btn-outline-gold flex-fill" onclick="window.print()">🖨️ Print</button>
+        <a id="dlPng" class="btn btn-outline-gold flex-fill" download>⬇️ PNG</a>
+        <a id="dlPdf" class="btn btn-gold flex-fill" href="/api/student/token.pdf" >⬇️ PDF</a>
+      </div>
+      <div class="text-center mt-4">
+        <button class="btn btn-link text-secondary" id="logout">Logout</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}<script src="/static/js/token.js"></script>{% endblock %}

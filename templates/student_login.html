@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Student Login | {{ event_name }}{% endblock %}
+{% block body %}
+<div class="container py-5">
+  <div class="text-center mb-4">
+    <h1 class="brand-title">{{ event_name }}</h1>
+    <p class="text-secondary">Food Token Management</p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="card card-dark p-4">
+        <h4 class="mb-3 text-center">Student Login</h4>
+        <form id="loginForm">
+          <div class="mb-3">
+            <label class="form-label">Roll Number</label>
+            <input type="text" class="form-control" name="roll_no" required autofocus>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" required>
+            <small class="text-secondary">Hint: same as your Roll Number</small>
+          </div>
+          <button class="btn btn-gold w-100" type="submit">Login</button>
+          <div id="msg" class="text-danger small mt-3 text-center"></div>
+        </form>
+        <hr class="border-secondary mt-4">
+        <div class="text-center"><a href="/admin/login" class="text-warning">Admin Login →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/student_login.js"></script>
+{% endblock %}

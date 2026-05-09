@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard | {{ event_name }}{% endblock %}
+{% block body %}
+<nav class="navbar navbar-dark bg-black px-3">
+  <a class="navbar-brand" href="/admin/dashboard">{{ event_name }} · Admin</a>
+  <div>
+    <a class="btn btn-outline-gold btn-sm me-2" href="/admin/scanner">📷 Scanner</a>
+    <button class="btn btn-outline-gold btn-sm" id="logout">Logout</button>
+  </div>
+</nav>
+
+<div class="container-fluid py-4">
+  <div class="row g-3 mb-4">
+    <div class="col-6 col-md-2"><div class="stat-card"><div class="label">Total</div><div class="value" id="sTotal">0</div></div></div>
+    <div class="col-6 col-md-2"><div class="stat-card"><div class="label">Veg</div><div class="value" id="sVeg">0</div></div></div>
+    <div class="col-6 col-md-2"><div class="stat-card"><div class="label">Non-Veg</div><div class="value" id="sNon">0</div></div></div>
+    <div class="col-6 col-md-2"><div class="stat-card"><div class="label">Not Selected</div><div class="value" id="sNot">0</div></div></div>
+    <div class="col-6 col-md-2"><div class="stat-card"><div class="label">Tokens Used</div><div class="value" id="sUsed">0</div></div></div>
+    <div class="col-6 col-md-2"><div class="stat-card"><div class="label">Tokens Unused</div><div class="value" id="sUnused">0</div></div></div>
+  </div>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-6">
+      <div class="card card-dark p-3"><h6 class="text-warning">Food Distribution</h6><canvas id="chartFood"></canvas></div>
+    </div>
+    <div class="col-md-6">
+      <div class="card card-dark p-3"><h6 class="text-warning">Token Status</h6><canvas id="chartStatus"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card card-dark p-3 mb-4">
+    <h6 class="text-warning">Bulk Import Students (Excel)</h6>
+    <form id="uploadForm" class="row g-2 align-items-center">
+      <div class="col-md-8"><input type="file" name="file" accept=".xlsx,.xls" class="form-control" required></div>
+      <div class="col-md-2"><button class="btn btn-gold w-100" type="submit">Upload</button></div>
+      <div class="col-md-2"><a class="btn btn-outline-gold w-100" id="exportBtn" href="#">Export Excel</a></div>
+    </form>
+    <div id="uploadMsg" class="text-secondary small mt-2"></div>
+  </div>
+
+  <div class="card card-dark p-3">
+    <div class="row g-2 mb-3">
+      <div class="col-md-6"><input id="search" class="form-control" placeholder="Search name or roll no…"></div>
+      <div class="col-md-3">
+        <select id="filterFood" class="form-select">
+          <option value="">All</option>
+          <option>Veg</option><option>Non-Veg</option><option value="None">Not Selected</option>
+        </select>
+      </div>
+      <div class="col-md-3"><button id="reload" class="btn btn-outline-gold w-100">Refresh</button></div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-dark-gold align-middle">
+        <thead><tr><th>#</th><th>Name</th><th>Roll No</th><th>Food</th><th>Token</th><th>Status</th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="/static/js/admin_dashboard.js"></script>
+{% endblock %}
