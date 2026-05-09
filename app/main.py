@@ -30,7 +30,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="Farewell Food Token Management", lifespan=lifespan)
+app = FastAPI(title="BIHER IT Farewell 2026", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
