@@ -47,7 +47,6 @@ app.include_router(admin.router)
 @app.get("/")
 async def root():
     return {"message": "Server is running"}
-
 @app.get("/api/health")
 async def health():
     return {"ok": True, "event": settings.EVENT_NAME}
