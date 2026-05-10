@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
+
 from .config import settings
 from .database import Base, engine, SessionLocal
 from .excel_io import import_students_from_path
@@ -30,7 +31,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="Farewell Food Token Management", lifespan=lifespan)
+app = FastAPI(title=settings.EVENT_NAME, lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,

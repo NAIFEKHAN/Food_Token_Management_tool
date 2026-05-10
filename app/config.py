@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     ADMIN_USERNAME: str = "biher"
     ADMIN_PASSWORD: str = "biherit"
 
-    EVENT_NAME: str = "BIHER Farewell 2026"
+    EVENT_NAME: str = "BIHER IT Farewell 2026"
     EVENT_YEAR: int = 2026
 
     STUDENTS_EXCEL_PATH: str = ""
