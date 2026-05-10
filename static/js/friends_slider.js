@@ -4,7 +4,7 @@ const friends = [
     { name: "NAIFE KHAN M", role: "Editor", image: "/static/images/friends/naife.jpeg" },
     { name: "GUGAN S", role: "Designer", image: "/static/images/friends/gugan.jpeg" },
     { name: "KOTIREDDY", role: "Designer", image: "/static/images/friends/koti.jpeg" },
-    { name: "JALLA BHARGAV", role: "Organizer", image: "/static/images/friends/bhargav.jpeg" },
+    { name: "JALLA BHARGAV", role: "Volunteer", image: "/static/images/friends/bhargav.jpeg" },
     { name: "ASHWIN A", role: "Incharge", image: "/static/images/friends/ashwin.jpeg" },
     { name: "PRAVEEN V M", role: "Editor", image: "/static/images/friends/cr.jpeg" },
     { name: "DEVDHARSHAN J", role: "Editor", image: "/static/images/friends/dev.jpeg" },
@@ -20,7 +20,13 @@ const friends = [
     { name: "PRAKASH K", role: "Incharge", image: "/static/images/friends/prakash.jpeg"},
     { name: "RAVICHANDRAN J", role: "Designer", image: "/static/images/friends/ravi.jpeg"},
     { name: "SANTHOSH", role: "volunteer", image: "/static/images/friends/sandhosh.jpeg"},
-    { name: "SANJAI KUMAR C", role: "Designer", image: "/static/images/friends/sanjay.jpeg"}
+    { name: "SANJAI KUMAR C", role: "Volunteer", image: "/static/images/friends/sanjay.jpeg"},
+    { name: "SUMANTH REDDY", role: "Volunteer", image: "/static/images/friends/sumanth.jpeg"},
+    { name: "SIVASELVAM K", role: "Volunteer", image: "/static/images/friends/selva.jpeg"},
+    { name: "RITHIP REDDY", role: "Designer", image: "/static/images/friends/rithip.jpeg"},
+    { name: "CHANDRU S", role: "Volunteer", image: "/static/images/friends/chandru.jpeg"},
+    { name: "JAIDI AVINASH", role: "Designer", image: "/static/images/friends/avinash.jpeg"},
+    { name: "ROHITH REDDY", role: "Volunteer", image: "/static/images/friends/rohith.jpeg"}
 ];
 
 const track = document.getElementById('friends-track');
