@@ -1,43 +1,67 @@
 {% extends "base.html" %}
 {% block title %}Admin Login | {{ event_name }}{% endblock %}
+
 {% block body %}
 <div class="container py-5">
-  <div class="text-center mb-4"><h1 class="brand-title">{{ event_name }} — Admin</h1></div>
+
+  <div class="text-center mb-4">
+    <h1 class="brand-title">{{ event_name }} — Admin</h1>
+  </div>
+
   <div class="row justify-content-center">
     <div class="col-md-5">
+
       <div class="card card-dark p-4">
+
         <h4 class="mb-3 text-center">Administrator Login</h4>
+
         <form id="adminLogin">
+
           <div class="mb-3">
             <label class="form-label">Username</label>
             <input class="form-control" name="username" required>
           </div>
+
           <div class="mb-3">
             <label class="form-label">Password</label>
             <input type="password" class="form-control" name="password" required>
           </div>
-          <button class="btn btn-gold w-100" type="submit">Login</button>
+
+          <button class="btn btn-gold w-100" type="submit">
+            Login
+          </button>
+
           <div id="msg" class="text-danger small mt-3 text-center"></div>
+
         </form>
+
         <hr class="border-secondary mt-4">
-        <div class="text-center"><a href="/" class="text-warning">← Student Login</a></div>
+
+        <div class="text-center">
+          <a href="/" class="text-warning">
+            ← Student Login
+          </a>
+        </div>
+
       </div>
+
     </div>
   </div>
+
 </div>
+
 <div class="memories-title text-center">
+    <div class="gold-line"></div>
     <h2>Event Coordination Team</h2>
 </div>
+
 <div class="slider-wrapper">
     <div class="slider-track" id="friends-track"></div>
 </div>
+
 {% endblock %}
-<<<<<<< HEAD
+
 {% block scripts %}
 <script src="/static/js/admin_login.js"></script>
 <script src="/static/js/friends_slider.js"></script>
 {% endblock %}
-
-=======
-{% block scripts %}<script src="/static/js/admin_login.js"></script>{% endblock %}
->>>>>>> 051ae550d2fa224873ff91c9d2bbe9f3bcd366c7
