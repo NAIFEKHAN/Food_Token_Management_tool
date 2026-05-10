@@ -8,7 +8,7 @@ const friends = [
     { name: "DEVDHARSHAN J", role: "Designer", image: "/static/images/friends/dev.jpeg" },
     { name: "GUGAN S", role: "Designer", image: "/static/images/friends/gugan.jpeg" },
     { name: "KAVIPRIYAN M", role: "Designer", image: "/static/images/friends/kavi.jpeg" },
-    { name: "KUMARAGURUBARAN D", role: "Designer", image: "/static/images/friends/kumaraguru.jpeg" },
+    { name: "KUMARAGURUBARAN", role: "Designer", image: "/static/images/friends/kumaraguru.jpeg" },
     { name: "MUKESH R", role: "Designer", image: "/static/images/friends/mukesh.jpeg" },
     { name: "NAIFE KHAN M", role: "Designer", image: "/static/images/friends/naife.jpeg" },
     { name: "PRAKADESH", role: "Designer", image: "/static/images/friends/pragadeesh.jpeg" },
