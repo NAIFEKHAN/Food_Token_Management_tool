@@ -84,6 +84,102 @@ body {
 .badge-used { background: #555; }
 .badge-unused { background: var(--gold); color: #1a1300; }
 
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 25px 0;
+    margin-top: 30px;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+    animation: train-move 90s linear infinite;
+}
+
+.friend-card {
+    flex: 0 0 auto;
+    width: 160px !important;
+    max-width: 160px !important;
+    min-width: 160px !important;
+
+    background: #111;
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.friend-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(243, 198, 35, 0.4);
+}
+
+.friend-card img {
+    width: 140px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.friend-card .name {
+    color: #F3C623;
+    font-weight: bold;
+    font-size: 14px;
+
+    display: block;
+    text-align: center;
+
+    min-height: 32px;
+    margin-top: 6px;
+    line-height: 16px;
+}
+
+.friend-card .role {
+    color: #bbb;
+    font-size: 12px;
+
+    display: block;
+    text-align: center;
+
+    margin-top: 1px;
+}
+
+.slider-track {
+    align-items: center;
+}
+.memories-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    border-top: 2px solid #D4AF37;
+    padding-top: 25px;
+}
+
+.memories-title h2 {
+    color: #D4AF37;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+
+@keyframes train-move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% / 3));
+    }
+}
+
 @media print {
   body * { visibility: hidden; }
   #print-area, #print-area * { visibility: visible; }
