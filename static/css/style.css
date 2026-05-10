@@ -96,7 +96,7 @@ body {
     display: flex;
     width: max-content;
     gap: 20px;
-    animation: train-move 110s linear infinite;
+    animation: train-move 130s linear infinite;
 }
 
 .friend-card {
